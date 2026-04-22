@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The AI-Powered Superintendent · 30 Workflows</title>
+<meta name="description" content="A clickable library of 30 AI workflows for school superintendents — board governance, strategic planning, labor negotiations, crisis comms, curriculum, pupil personnel, HR, and finance. Built by Dr. Brian Graham." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230f1b2d'/><text x='50' y='66' text-anchor='middle' font-family='Georgia' font-size='48' fill='%23b88330' font-weight='700' font-style='italic'>S</text></svg>">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="#" class="brand" aria-label="Home">
+      <svg class="logo" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <rect x="1" y="1" width="38" height="38" rx="8" stroke="currentColor" stroke-width="2"/>
+        <path d="M26 14c-1.8-1.5-4-2.2-6-2.2-3 0-5 1.5-5 3.5 0 5 12 3 12 8.5 0 2.5-2.5 4.2-6 4.2-2.3 0-4.5-.8-6.3-2.3" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="brand-text">The AI-Powered Superintendent</span>
+    </a>
+    <nav class="site-nav">
+      <a href="#explorer">Workflows</a>
+      <a href="#voice">Voice-First</a>
+      <a href="#agents">Agentic</a>
+      <a href="#about">About</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">For public school superintendents · evergreen resource</div>
+    <h1 class="hero-title">The AI-Powered <em>Superintendent</em>.</h1>
+    <p class="hero-sub">A clickable library of 30 workflows across board governance, strategic planning, labor negotiations, crisis comms, curriculum, pupil personnel, HR, and finance. Organized by the size of district you run — because the job is not the same at 450 students and at 45,000.</p>
+    <div class="hero-meta">
+      <span>30 workflows</span>
+      <span class="dot">·</span>
+      <span>8 domains</span>
+      <span class="dot">·</span>
+      <span>5 district size bands</span>
+      <span class="dot">·</span>
+      <span>Copy-ready prompts</span>
+    </div>
+    <blockquote class="hero-quote">
+      <p>The superintendent is the only person in the district whose job it is to see the <em>whole</em> — the board's priorities, the union's reality, the building-level grind, the family at the budget hearing. AI is a thought partner for that whole view.</p>
+      <cite>— The premise behind this library</cite>
+    </blockquote>
+  </div>
+</section>
+
+<section id="explorer" class="explorer">
+  <div class="wrap">
+    <div class="explorer-header">
+      <h2 class="section-title">Workflow Library</h2>
+      <p class="section-sub">Filter by tool, domain, or the size of your district. Or switch to the "By District Size" view to see workflows grouped for your context.</p>
+    </div>
+
+    <div class="view-toggle" role="tablist" aria-label="View mode">
+      <button class="view-btn active" data-view="grid" role="tab" aria-selected="true">Grid view</button>
+      <button class="view-btn" data-view="sized" role="tab" aria-selected="false">By District Size</button>
+    </div>
+
+    <div class="controls" role="region" aria-label="Filter workflows" id="filterControls">
+      <div class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="search" id="searchInput" placeholder="Search workflows, tools, or keywords…" aria-label="Search workflows" />
+      </div>
+
+      <div class="filter-group" role="radiogroup" aria-label="Filter by district size">
+        <span class="filter-label">District size</span>
+        <button class="chip active" data-filter="size" data-value="all">All</button>
+        <button class="chip" data-filter="size" data-value="xs">&lt; 500</button>
+        <button class="chip" data-filter="size" data-value="sm">&lt; 1,000</button>
+        <button class="chip" data-filter="size" data-value="md">&lt; 3,000</button>
+        <button class="chip" data-filter="size" data-value="lg">&lt; 8,000</button>
+        <button class="chip" data-filter="size" data-value="xl">15,000+</button>
+      </div>
+
+      <div class="filter-group" role="radiogroup" aria-label="Filter by tool">
+        <span class="filter-label">Tool</span>
+        <button class="chip active" data-filter="tool" data-value="all">All</button>
+        <button class="chip" data-filter="tool" data-value="voice">Voice Mode</button>
+        <button class="chip" data-filter="tool" data-value="chatgpt">ChatGPT</button>
+        <button class="chip" data-filter="tool" data-value="claude">Claude</button>
+        <button class="chip" data-filter="tool" data-value="notebooklm">NotebookLM</button>
+      </div>
+
+      <div class="filter-group" role="radiogroup" aria-label="Filter by domain">
+        <span class="filter-label">Domain</span>
+        <button class="chip active" data-filter="domain" data-value="all">All</button>
+        <button class="chip" data-filter="domain" data-value="board">Board &amp; Governance</button>
+        <button class="chip" data-filter="domain" data-value="strategy">Strategic Planning</button>
+        <button class="chip" data-filter="domain" data-value="labor">Labor &amp; Negotiations</button>
+        <button class="chip" data-filter="domain" data-value="crisis">Crisis Comms</button>
+        <button class="chip" data-filter="domain" data-value="curriculum">Curriculum &amp; Instruction</button>
+        <button class="chip" data-filter="domain" data-value="pupil">Pupil Personnel</button>
+        <button class="chip" data-filter="domain" data-value="hr">HR &amp; Personnel</button>
+        <button class="chip" data-filter="domain" data-value="ops">Finance &amp; Operations</button>
+      </div>
+    </div>
+
+    <div class="results-meta">
+      <span id="resultCount">30 workflows</span>
+    </div>
+
+    <div id="cardGrid" class="card-grid"></div>
+
+    <div id="sizedView" class="sized-view" hidden></div>
+
+    <div id="emptyState" class="empty-state" hidden>
+      <p>No workflows match those filters. Try clearing a chip or broadening your search.</p>
+    </div>
+  </div>
+</section>
+
+<section id="voice" class="voice-section">
+  <div class="wrap">
+    <div class="voice-header">
+      <div class="eyebrow light">Voice-First Leadership</div>
+      <h2 class="section-title light">The superintendent's best thinking happens in motion.</h2>
+      <p class="section-sub light">Between buildings. On the drive to the regional meeting. On the walk back from the board room at 10 PM. Advanced Voice Mode makes those minutes into real strategic work — rehearsal, synthesis, hard-conversation preparation.</p>
+    </div>
+    <div class="voice-grid">
+      <article class="voice-card">
+        <div class="voice-num">01</div>
+        <h3>Rehearse before the board executive session</h3>
+        <p>Talk through the hardest question the board will ask. Let AI push back as the trustee whose support you need. Find the phrasing before the gavel, not during it.</p>
+      </article>
+      <article class="voice-card">
+        <div class="voice-num">02</div>
+        <h3>Synthesize community listening sessions</h3>
+        <p>Drive home after three hours of forum. Talk out what you heard. Get back the theme, the surprise, and the question you didn't ask — before the memory fades.</p>
+      </article>
+      <article class="voice-card">
+        <div class="voice-num">03</div>
+        <h3>Practice the press conference</h3>
+        <p>Role-play the skeptical reporter. Get the follow-up questions you'll actually face. Find the sentence you don't want to give them before they ask.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="agents" class="agents-section">
+  <div class="wrap">
+    <div class="agents-header">
+      <div class="eyebrow light">The Agentic Frontier</div>
+      <h2 class="section-title light">NotebookLM as Specialist on the Superintendent's Staff</h2>
+      <p class="section-sub light">A notebook with the right sources becomes a domain expert the superintendent can query. Citation-grounded. Never makes things up. Six specialist agents every central office should stand up this quarter.</p>
+    </div>
+    <div class="agent-grid">
+      <article class="agent-card">
+        <div class="agent-num">01</div>
+        <h3>The Labor Relations Historian</h3>
+        <p>CBAs, MOAs, settlements, and every grievance outcome. Tells you whether the current case has been litigated before and how it went.</p>
+      </article>
+      <article class="agent-card">
+        <div class="agent-num">02</div>
+        <h3>The Policy Reconciler</h3>
+        <p>Board policy, CBA, student handbook, faculty handbook, state guidance. Surfaces where the four disagree — before the parent or the union does.</p>
+      </article>
+      <article class="agent-card">
+        <div class="agent-num">03</div>
+        <h3>The McKinney-Vento Advisor</h3>
+        <p>Federal law, state regulation, district procedure. The 4:47 PM Friday answer that keeps a family enrolled and the district in compliance.</p>
+      </article>
+      <article class="agent-card">
+        <div class="agent-num">04</div>
+        <h3>The Civil Service Personnel Agent</h3>
+        <p>County rules, job descriptions, canvassing procedure. The difference between a legal hire and a rescinded offer.</p>
+      </article>
+      <article class="agent-card">
+        <div class="agent-num">05</div>
+        <h3>The Budget Context Agent</h3>
+        <p>Ten years of budgets, state aid runs, enrollment projections, and tax-cap calculations. Board asks "how does this compare?" and gets an actual answer.</p>
+      </article>
+      <article class="agent-card">
+        <div class="agent-num">06</div>
+        <h3>The Crisis Playbook</h3>
+        <p>Past incident response plans, state guidance, legal review comments. In the 90-minute window, recalls the template the district has already approved.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="wrap about-grid">
+    <div>
+      <div class="eyebrow">About this resource</div>
+      <h2 class="section-title">Built for the person who sees the whole district.</h2>
+      <p>The superintendent is the only person in the district whose job it is to see the whole — the board's political reality, the union's history, the principal's Monday-morning crisis, the family at the budget hearing, the student whose story the data will never tell. Most tools treat the superintendent as a building principal with a larger span. They are not.</p>
+      <p>This library is organized around the eight domains where the superintendent's work actually lives, and scaled by district size — because a superintendent of 450 students is the curriculum director, the HR director, and the bus-route planner on any given morning, while a superintendent of 40,000 is running a small city. The workflows that help are not the same.</p>
+      <p>Copy the prompts. Adapt them to your district. Share them with the superintendent across the lake who started last month.</p>
+    </div>
+    <div class="about-card">
+      <h3>Dr. Brian Graham</h3>
+      <p class="muted">Superintendent of Schools<br/>Grand Island Central School District</p>
+      <p>President, Erie-Niagara School Superintendents Association. External Advisory Board Member, National AI Institute for Exceptional Education at the University at Buffalo. National presenter on AI in public education. Host, <em>Achieving Joy and Mastery in Public Schools</em>.</p>
+      <p class="thanks">Built as an evergreen resource for superintendent peers in New York and nationally. Share it freely. Send notes, corrections, and new workflows.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>The AI-Powered Superintendent · an evergreen library of 30 workflows for public school superintendents, organized by domain and district size. Every workflow is meant to be copied, adapted, and improved by the people closest to the work.</p>
+  </div>
+</footer>
+
+<!-- Modal -->
+<div id="modal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-panel">
+    <button class="modal-close" data-close aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
