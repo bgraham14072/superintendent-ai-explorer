@@ -517,6 +517,34 @@ button { font-family: inherit; cursor: pointer; }
 .about-card p { font-size: 15px; line-height: 1.55; color: var(--text); margin: 0 0 14px; }
 .about-card .muted { color: var(--muted); font-size: 14px; }
 .about-card .thanks { font-size: 14px; color: var(--muted); margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--line); }
+.pdf-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 18px;
+  padding: 16px 18px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  border-radius: 8px;
+  color: var(--ink);
+  text-decoration: none;
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+.pdf-link:hover {
+  background: #fff;
+  border-left-color: var(--accent2);
+  transform: translateY(-1px);
+}
+.pdf-link svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  color: var(--accent);
+}
+.pdf-link span { display: flex; flex-direction: column; gap: 2px; line-height: 1.35; }
+.pdf-link strong { font-family: var(--font-body); font-size: 14px; font-weight: 600; color: var(--ink); }
+.pdf-link em { font-style: normal; font-size: 12px; color: var(--muted); }
 
 /* --- Footer --- */
 .site-footer {
